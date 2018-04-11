@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Applications" max_length="40" name="x_58872_needit_applications" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element default="true" label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Application Name" mandatory="true" max_length="80" name="u_application_name" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Application owner" max_length="40" name="u_application_owner" read_only="true" type="string" use_dependent_field="true"/>
+        <element choice_field="sys_class_name" choice_table="x_58872_needit_servicecomponents" label="Service component name" mandatory="true" max_length="32" name="u_service_component_name" reference="x_58872_needit_servicecomponents" type="reference"/>
+        <index name="index">
+            <element name="u_service_component_name"/>
+        </index>
+    </element>
+</database>

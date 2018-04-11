@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="ServiceComponents" max_length="40" name="x_58872_needit_servicecomponents" type="collection">
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" read_only="true" type="sys_class_name"/>
+        <element label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element label="Assignment group" mandatory="true" max_length="32" name="u_assignment_group" reference="sys_user_group" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Primary contact" max_length="40" name="u_primary_contact" type="string"/>
+        <element label="SDM Name" max_length="32" name="u_sdm" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Secondary contact" max_length="40" name="u_secondary_contact" type="string"/>
+        <element attributes="edge_encryption_enabled=true" display="true" label="Service component name" mandatory="true" max_length="40" name="u_service_component_name" type="string"/>
+        <index name="index">
+            <element name="u_assignment_group"/>
+        </index>
+        <index name="index2">
+            <element name="u_sdm"/>
+        </index>
+    </element>
+</database>
