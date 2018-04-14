@@ -2,7 +2,7 @@
 <record_update table="item_option_new">
     <item_option_new action="INSERT_OR_UPDATE">
         <active>true</active>
-        <attributes/>
+        <attributes>glide_list</attributes>
         <cat_item display_value="Server Access Request Form ">059d8f664f111300d8788deba310c7e4</cat_item>
         <category/>
         <choice_direction>down</choice_direction>
@@ -38,7 +38,7 @@
         <mask_use_confirmation>false</mask_use_confirmation>
         <mask_use_encryption>false</mask_use_encryption>
         <name>u_group_name</name>
-        <order>640</order>
+        <order>1300</order>
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <question_text>Group Name(s)</question_text>
@@ -60,14 +60,14 @@
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2018-04-11 08:52:09</sys_created_on>
         <sys_id>89020dd74f511300d8788deba310c76c</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>Group Name(s)</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>item_option_new_89020dd74f511300d8788deba310c76c</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-04-11 08:59:25</sys_updated_on>
+        <sys_updated_on>2018-04-11 17:46:08</sys_updated_on>
         <table/>
         <tooltip>Groups to which changes to be done</tooltip>
         <type>21</type>
@@ -76,7 +76,7 @@
         <use_reference_qualifier>advanced</use_reference_qualifier>
         <variable_name/>
         <variable_set/>
-        <variable_width/>
+        <variable_width>50</variable_width>
         <visibility>1</visibility>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
