@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="AD Groups" max_length="40" name="x_58872_needit_ad_groups" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element label="AD group name" max_length="40" name="u_ad_group_name" type="string"/>
+        <element label="Group description" max_length="40" name="u_group_description" type="string"/>
+    </element>
+</database>

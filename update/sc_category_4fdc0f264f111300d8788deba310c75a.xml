@@ -17,7 +17,7 @@
         <order>0</order>
         <parent display_value="Application Access Requests">1e9a03264f111300d8788deba310c735</parent>
         <roles/>
-        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sc_catalog display_value="Technical Catalog">742ce428d7211100f2d224837e61036d</sc_catalog>
         <show_in_cms>false</show_in_cms>
         <sys_class_name>sc_category</sys_class_name>
         <sys_created_by>admin</sys_created_by>

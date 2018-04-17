@@ -2,18 +2,18 @@
 <record_update table="sc_cat_item_catalog">
     <sc_cat_item_catalog action="INSERT_OR_UPDATE">
         <sc_cat_item display_value="Server Access Request Form ">059d8f664f111300d8788deba310c7e4</sc_cat_item>
-        <sc_catalog display_value="Service Catalog">e0d08b13c3330100c8b837659bba8fb4</sc_catalog>
+        <sc_catalog display_value="Technical Catalog">742ce428d7211100f2d224837e61036d</sc_catalog>
         <sys_class_name>sc_cat_item_catalog</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2018-04-09 11:08:20</sys_created_on>
-        <sys_id>940e83a64f111300d8788deba310c76e</sys_id>
+        <sys_created_on>2018-04-17 17:01:49</sys_created_on>
+        <sys_id>50ab61914f651300d8788deba310c733</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>Service Catalog.Access Request Form Template</sys_name>
+        <sys_name>Technical Catalog.Server Access Request Form </sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sc_cat_item_catalog_940e83a64f111300d8788deba310c76e</sys_update_name>
+        <sys_update_name>sc_cat_item_catalog_50ab61914f651300d8788deba310c733</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-04-09 11:08:20</sys_updated_on>
+        <sys_updated_on>2018-04-17 17:01:49</sys_updated_on>
     </sc_cat_item_catalog>
 </record_update>
