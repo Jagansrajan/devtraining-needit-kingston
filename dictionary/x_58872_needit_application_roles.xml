@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element audit="true" label="Application Roles" max_length="40" name="x_58872_needit_application_roles" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" read_only="true" type="string"/>
+        <element label="Active" max_length="40" name="u_active" type="boolean"/>
+        <element attributes="edge_encryption_enabled=true" label="Role description" max_length="65" name="u_role_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Role name" max_length="40" name="u_role_name" type="string"/>
+        <element label="Service component" max_length="32" name="u_service_component" reference="x_58872_needit_servicecomponents" type="reference"/>
+        <index name="index">
+            <element name="u_service_component"/>
+        </index>
+    </element>
+</database>
