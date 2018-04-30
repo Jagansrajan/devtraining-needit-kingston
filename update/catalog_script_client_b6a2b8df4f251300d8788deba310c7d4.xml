@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="catalog_script_client">
+    <catalog_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_catalog>true</applies_catalog>
+        <applies_extended>false</applies_extended>
+        <applies_req_item>false</applies_req_item>
+        <applies_sc_task>false</applies_sc_task>
+        <applies_target_record>false</applies_target_record>
+        <applies_to>item</applies_to>
+        <cat_item display_value="EMD Applications Access Request">648833f24f695300d8788deba310c7fa</cat_item>
+        <cat_variable>IO:e49def4f4fa11300d8788deba310c7c2</cat_variable>
+        <condition/>
+        <description/>
+        <field/>
+        <global>true</global>
+        <messages/>
+        <name>Auto Populate Application Related Detail</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading) {
+   if (isLoading || newValue == '') {
+      return;
+   }
+
+   //Type appropriate comment here, and begin script below
+	var app_name = g_form.getReference('u_application_name', doAlert); // doAlert is our callback function
+	 // doAlert is our callback function
+
+}
+
+function doAlert(app_name) { //reference is passed into callback as first arguments
+   //alert ("1");
+	g_form.setValue('u_application_id',app_name.number);
+	//alert("1.1");
+	g_form.setValue('u_application_owner',app_name.u_application_owner);
+	if(app_name.u_validated == 'true'){
+		g_form.setValue('u_validated','true');
+	} else {
+		g_form.setValue('u_validated','false');
+	}
+	
+	if(app_name.u_application_owner_approval_required == 'true'){
+		g_form.setValue('u_application_owner_approval','true');
+	} else {
+		g_form.setValue('u_application_owner_approval','false');
+	}
+	
+	if(app_name.u_business_approval_required == 'true'){
+		g_form.setValue('u_business_approval_required','true');
+	} else {
+		g_form.setValue('u_business_approval_required','false');
+	}
+	
+	//g_form.setValue('u_application_owner_approval',app_name.u_application_owner_approval_required);
+	//g_form.setValue('u_business_approval_required',app_name.u_business_approval_required);
+	g_form.setValue('u_business_approval_1',app_name.u_business_approver_1);
+	g_form.setValue('u_business_approval_2',app_name.u_business_approver_2);
+	//g_form.setValue('u_access_type',app_name.u_access_type);
+	
+	var ga = new GlideAjax('GetReferenceValue'); //Name of the Ajax Script Inclide
+		ga.addParam('sysparm_name','initialize');
+        ga.addParam('sysparm_name','ajaxClientDataHandler'); //Method to call
+        //Add new parameters for our new GlideAjax Class
+        ga.addParam('sysparm_tablename','x_58872_needit_application_access_types'); //Table name
+	    alert("sysid -- " + app_name.u_access_type);
+        ga.addParam('sysparm_sysid',app_name.u_access_type); //newValue
+        ga.addParam('sysparm_fieldname','u_access_type'); //Field name we want to retrieve
+        ga.getXML(userCallback);
+}
+
+function userCallback(response) {
+    alert("Hi 1 ++ " + response);    
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+		alert("Hi--  ++ " + answer);
+        answer = answer.evalJSON();
+	alert("Hi  ++ " + answer);
+        setAccessType(answer);
+}
+
+function setAccessType(caller) { //returns only the values we need
+	alert("Hi 2");
+        if (caller) {
+			alert("Hi 3");
+                  g_form.setValue(
+                            'u_access_type',
+                            caller.u_access_type.value, // use value
+                            caller.u_access_type.displayValue //set value to avoid round-trip
+                  );
+        }
+}
+]]></script>
+        <sys_class_name>catalog_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-23 18:09:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b6a2b8df4f251300d8788deba310c7d4</sys_id>
+        <sys_mod_count>20</sys_mod_count>
+        <sys_name>Auto Populate Application Related Detail</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>catalog_script_client_b6a2b8df4f251300d8788deba310c7d4</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-24 18:12:09</sys_updated_on>
+        <table/>
+        <type>onChange</type>
+        <ui_type>10</ui_type>
+        <variable_set/>
+        <view/>
+    </catalog_script_client>
+</record_update>

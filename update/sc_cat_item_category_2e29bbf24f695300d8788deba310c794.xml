@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="EMD Applications Access Request">648833f24f695300d8788deba310c7fa</sc_cat_item>
+        <sc_category display_value="EMD Applications Access Request">d877ff324f695300d8788deba310c7cd</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-04-22 19:11:05</sys_created_on>
+        <sys_id>2e29bbf24f695300d8788deba310c794</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EMD Applications Access Request.EMD Applications Access Request</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sc_cat_item_category_2e29bbf24f695300d8788deba310c794</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-04-22 19:11:05</sys_updated_on>
+    </sc_cat_item_category>
+</record_update>
